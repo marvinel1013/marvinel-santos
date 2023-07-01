@@ -10,7 +10,7 @@ const NavLink = () => {
         {NavLinkData.map((data) => (
           <li key={data.id}>
             <Link href={data.link}>
-              <div>
+              <div className={firaCodeFont}>
                 <h2 className="group text-xs xl:text-sm">
                   <span className="text-primary mr-1">{data.number}</span>
                   <span className="text-textSecondary font-light group-hover:text-primary duration-200 ease-in ">

@@ -1,4 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
+import LeftSideBar from "@/components/sidebar/LeftSideBar";
+import RightSideBar from "@/components/sidebar/RightSidBar";
 import { interFont } from "@/fonts/font";
 import "@/styles/globals.css";
 import { Metadata } from "next";
@@ -18,6 +20,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={interFont}>
         <Navbar />
         {children}
+        <LeftSideBar />
+        <RightSideBar />
       </body>
     </html>
   );
