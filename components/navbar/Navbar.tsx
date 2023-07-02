@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import MobileMenu from "./mobile_menu/MobileMenu";
 import NavLink from "./NavLink";
+import MenuIcon from "../mobile_menu/MenuIcon";
 
 const Navbar = () => {
   const [isShadow, setIsShadow] = useState<boolean>(false);
@@ -39,11 +39,11 @@ const Navbar = () => {
         isShadow
           ? "shadow-lg backdrop-blur-lg bg-slate-900/50"
           : "pt-2 md:pt-6 lg:pt-10 xl:pt-12"
-      } flex items-center justify-between px-4 md:px-8 lg:px-10 xl:px-14 fixed z-30 h-16 w-full bg-slate-900 duration-500 ease-in-out`}
+      } flex items-center justify-between px-4 md:px-8 lg:px-10 xl:px-14 fixed z-40 h-16 w-full bg-slate-900 duration-500 ease-in-out`}
     >
       <Logo />
       <NavLink />
-      <MobileMenu />
+      <MenuIcon />
     </nav>
   );
 };

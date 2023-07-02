@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+import MobileMenu from "@/components/mobile_menu/MobileMenu";
 import Navbar from "@/components/navbar/Navbar";
 import LeftSideBar from "@/components/sidebar/LeftSideBar";
 import RightSideBar from "@/components/sidebar/RightSidBar";
@@ -19,9 +21,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={interFont}>
         <Navbar />
+        <MobileMenu />
         {children}
         <LeftSideBar />
         <RightSideBar />
+        <Footer />
       </body>
     </html>
   );

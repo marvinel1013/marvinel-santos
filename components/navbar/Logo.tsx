@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <Link href="#hero">
         <div className="cursor-pointer z-20" title="Logo">
           <svg
