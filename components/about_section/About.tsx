@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import Title from "../Title";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import ProfilePic from "../../public/marvinel.png";
+
 const About = () => {
   return (
     <section
@@ -9,8 +13,21 @@ const About = () => {
       className="min-h-full py-[100px] w-full px-6  md:px-0 md:max-w-xl lg:max-w-3xl xl:max-w-4xl mx-auto"
     >
       <div className="w-full h-full">
-        <Title number="01." title="About Me" />
-        <div className="flex flex-col lg:flex-row items-center justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Title number="01." title="About Me" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row items-center justify-between"
+        >
           <p className="mt-8 lg:mt-12 xl:mt-14 text-sm md:text-base lg:max-w-md xl:max-w-xl">
             Hello! My name is Marvinel Santos. I am a graduate of Bachelor of
             Science in Information Technology and I am a self-taught Front-End
@@ -57,7 +74,7 @@ const About = () => {
             <div className="absolute border-2 border-primary top-0 h-full left-0 rounded right-0 translate-x-3 translate-y-3 -z-20 group-hover:translate-x-4 group-hover:translate-y-4 duration-300" />
             <div />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

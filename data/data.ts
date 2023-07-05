@@ -21,6 +21,7 @@ interface NavLinkType {
   title: string;
   number: string;
   link: string;
+  delay: number;
 }
 
 interface SocialLinksType {
@@ -36,6 +37,7 @@ interface SkillsDataType {
   icon: IconType;
   title: string;
   rate: string;
+  delay: number;
 }
 
 export const NavLinkData: NavLinkType[] = [
@@ -44,6 +46,7 @@ export const NavLinkData: NavLinkType[] = [
     title: "About",
     number: "01.",
     link: "#about",
+    delay: 0.3,
   },
 
   {
@@ -51,6 +54,7 @@ export const NavLinkData: NavLinkType[] = [
     title: "Skills",
     number: "02.",
     link: "#skills",
+    delay: 0.4,
   },
 
   {
@@ -58,6 +62,7 @@ export const NavLinkData: NavLinkType[] = [
     title: "Projects",
     number: "03.",
     link: "#projects",
+    delay: 0.5,
   },
 
   {
@@ -65,6 +70,7 @@ export const NavLinkData: NavLinkType[] = [
     title: "Contact",
     number: "04.",
     link: "#contact",
+    delay: 0.6,
   },
 ];
 
@@ -112,6 +118,7 @@ export const firstSetData: SkillsDataType[] = [
     icon: IoLogoHtml5,
     title: "HTML",
     rate: "83%",
+    delay: 0,
   },
 
   {
@@ -119,6 +126,7 @@ export const firstSetData: SkillsDataType[] = [
     icon: IoLogoCss3,
     title: "CSS",
     rate: "78%",
+    delay: 0.1,
   },
 
   {
@@ -126,6 +134,7 @@ export const firstSetData: SkillsDataType[] = [
     icon: SiJavascript,
     title: "JavaScript",
     rate: "68%",
+    delay: 0.2,
   },
 
   {
@@ -133,6 +142,7 @@ export const firstSetData: SkillsDataType[] = [
     icon: IoLogoReact,
     title: "React JS",
     rate: "73%",
+    delay: 0.3,
   },
 
   {
@@ -140,6 +150,7 @@ export const firstSetData: SkillsDataType[] = [
     icon: SiTailwindcss,
     title: "Tailwind CSS",
     rate: "76%",
+    delay: 0.4,
   },
 
   {
@@ -147,6 +158,7 @@ export const firstSetData: SkillsDataType[] = [
     icon: SiNextdotjs,
     title: "Next JS",
     rate: "71%",
+    delay: 0.5,
   },
 ];
 
@@ -156,6 +168,7 @@ export const secondSetData: SkillsDataType[] = [
     icon: SiTypescript,
     title: "TypeScript",
     rate: "64%",
+    delay: 0,
   },
 
   {
@@ -163,6 +176,7 @@ export const secondSetData: SkillsDataType[] = [
     icon: SiRedux,
     title: "Redux",
     rate: "61%",
+    delay: 0.1,
   },
 
   {
@@ -170,6 +184,7 @@ export const secondSetData: SkillsDataType[] = [
     icon: SiReactquery,
     title: "ReactQuery",
     rate: "60%",
+    delay: 0.2,
   },
 
   {
@@ -177,6 +192,7 @@ export const secondSetData: SkillsDataType[] = [
     icon: SiMongodb,
     title: "MongoDB",
     rate: "68%",
+    delay: 0.3,
   },
 
   {
@@ -184,6 +200,7 @@ export const secondSetData: SkillsDataType[] = [
     icon: SiNodedotjs,
     title: "Node JS",
     rate: "56%",
+    delay: 0.4,
   },
 
   {
@@ -191,5 +208,6 @@ export const secondSetData: SkillsDataType[] = [
     icon: SiGithub,
     title: "Github",
     rate: "82%",
+    delay: 0.5,
   },
 ];

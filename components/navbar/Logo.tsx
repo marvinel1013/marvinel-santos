@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Logo = () => {
   return (
-    <div className="relative z-50">
+    <motion.div
+      className="relative z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.1, ease: "easeInOut", duration: 0.5 }}
+    >
       <Link href="#hero">
         <div className="cursor-pointer z-20" title="Logo">
           <svg
@@ -66,7 +72,7 @@ const Logo = () => {
           </svg>
         </div>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

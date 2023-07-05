@@ -1,8 +1,16 @@
+"use client";
+
 import { socialLinks } from "@/data/data";
+import { motion } from "framer-motion";
 
 const LeftSideBar = () => {
   return (
-    <aside className="fixed w-36 bottom-0 hidden lg:block">
+    <motion.aside
+      className="fixed w-36 bottom-0 hidden lg:block"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2.2, duration: 0.5, ease: "easeIn" }}
+    >
       <ul className="flex flex-col items-center gap-8">
         {socialLinks.map((data) => (
           <a
@@ -20,7 +28,7 @@ const LeftSideBar = () => {
         ))}
         <li className="w-[0.5px] h-[120px] bg-textSecondary" />
       </ul>
-    </aside>
+    </motion.aside>
   );
 };
 

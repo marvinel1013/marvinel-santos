@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { firaCodeFont } from "@/fonts/font";
 import { BsGithub, BsBoxArrowUpRight } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
   title: string;
@@ -18,7 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const isRightSide = rightSide;
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
       className={`group relative h-full w-full rounded p-4 lg:px-0 overflow-hidden flex items-center ${
         isRightSide ? "justify-end" : "justify-start"
       }`}
@@ -90,7 +95,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           className="w-full rounded h-full object-cover opacity-20 lg:group-hover:opacity-100 duration-300"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

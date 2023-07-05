@@ -3,6 +3,7 @@
 import { firstSetData, secondSetData } from "@/data/data";
 import { RiArrowRightSFill } from "react-icons/ri";
 import { useState, useCallback } from "react";
+import { motion } from "framer-motion";
 import Button from "../Button";
 
 const SkillCard = () => {
@@ -16,9 +17,17 @@ const SkillCard = () => {
     <>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {firstSetData.map((data) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{
+              y: -8,
+              transition: { ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+            transition={{ delay: data.delay, ease: "easeOut" }}
             key={data.id}
-            className="group bg-secondary rounded flex items-center justify-center flex-col py-8 gap-2 cursor-pointer duration-300 hover:-translate-y-1.5"
+            className="group bg-secondary rounded flex items-center justify-center flex-col py-8 gap-2 cursor-pointer"
           >
             <data.icon className="text-5xl md:text-6xl xl:text-7xl text-textSecondary group-hover:text-primary duration-300" />
 
@@ -32,14 +41,22 @@ const SkillCard = () => {
               </span>
               <span className="text-primary">{data.rate}</span>
             </h3>
-          </div>
+          </motion.div>
         ))}
 
         {showMore &&
           secondSetData.map((data) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{
+                y: -8,
+                transition: { ease: "easeOut" },
+              }}
+              transition={{ delay: data.delay, ease: "easeOut" }}
+              viewport={{ once: true }}
               key={data.id}
-              className="group bg-secondary rounded flex items-center justify-center flex-col py-8 gap-2 cursor-pointer duration-300 hover:-translate-y-1.5"
+              className="group bg-secondary rounded flex items-center justify-center flex-col py-8 gap-2 cursor-pointer"
             >
               <data.icon className="text-5xl md:text-6xl xl:text-7xl text-textSecondary group-hover:text-primary duration-300" />
 
@@ -53,7 +70,7 @@ const SkillCard = () => {
                 </span>
                 <span className="text-primary">{data.rate}</span>
               </h3>
-            </div>
+            </motion.div>
           ))}
       </div>
 

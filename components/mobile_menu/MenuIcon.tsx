@@ -1,11 +1,17 @@
+"use client";
+
 import { useShowMobileMenu } from "@/hooks/useOpenMobileMenu";
+import { motion } from "framer-motion";
 
 const MenuIcon: React.FC = () => {
   const openMenu = useShowMobileMenu((value) => value.isOpen);
   const openMenuBar = useShowMobileMenu((value) => value.onOpen);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.1, ease: "easeInOut", duration: 0.5 }}
       onClick={openMenuBar}
       className="flex flex-col gap-1.5 cursor-pointer lg:hidden z-50"
     >
@@ -24,7 +30,7 @@ const MenuIcon: React.FC = () => {
           openMenu && "-rotate-45 -translate-y-2"
         }`}
       />
-    </div>
+    </motion.div>
   );
 };
 

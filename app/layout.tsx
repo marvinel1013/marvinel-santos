@@ -1,3 +1,4 @@
+import Wrapper from "@/components/Wrapper";
 import Footer from "@/components/footer/Footer";
 import MobileMenu from "@/components/mobile_menu/MobileMenu";
 import Navbar from "@/components/navbar/Navbar";
@@ -20,12 +21,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={interFont}>
-        <Navbar />
-        <MobileMenu />
-        {children}
-        <LeftSideBar />
-        <RightSideBar />
-        <Footer />
+        <Wrapper>
+          {/* <Navbar /> */}
+          <MobileMenu />
+          {children}
+          <LeftSideBar />
+          <RightSideBar />
+          <Footer />
+        </Wrapper>
       </body>
     </html>
   );
