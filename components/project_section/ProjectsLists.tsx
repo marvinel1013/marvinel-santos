@@ -6,10 +6,22 @@ import TodoAppImage from "@/assets/todoapp.png";
 import WebsiteV1Image from "@/assets/v1Portfolio.png";
 import WebsiteV2Image from "@/assets/v2portfolio.png";
 import ProjectCard from "./ProjectCard";
+import SpotifyClone from "@/assets/spotify.png";
 
 const ProjectsLists = () => {
   return (
     <div className="flex flex-col gap-20 lg:gap-36">
+      {/* Meal Recipe App */}
+      <ProjectCard
+        rightSide={false}
+        img={SpotifyClone}
+        title="Spotify Clone"
+        desc="View your top artists, top tracks, and detailed audio information about each track. And playlists of recommended tracks based on your existing playlists. Login via your spotify account to see the more feature."
+        codeLink="https://github.com/marvinel1013/spotify-clone"
+        demoLink="https://marvinel-santos-spotify-clone.vercel.app/"
+        techUsed="Next JS | ReactJS | TailwindCSS | Next Auth | Zustand | Spotify API | Vercel"
+      />
+
       {/* Meal Recipe App */}
       <ProjectCard
         rightSide={true}
